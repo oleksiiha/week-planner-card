@@ -62,6 +62,7 @@ export class WeekPlannerCard extends LitElement {
     _noCardBackground;
     _eventBackground;
     _compact;
+    _moreCompact;
     _language;
     _weather;
     _dateFormat;
@@ -109,6 +110,7 @@ export class WeekPlannerCard extends LitElement {
         this._noCardBackground = config.noCardBackground ?? false;
         this._eventBackground = config.eventBackground ?? 'var(--card-background-color, inherit)';
         this._compact = config.compact ?? false;
+        this._moreCompact = config.moreCompact ?? false;
         this._dateFormat = config.dateFormat ?? 'cccc d LLLL yyyy';
         this._timeFormat = config.timeFormat ?? 'HH:mm';
         this._locationLink = config.locationLink ?? 'https://www.google.com/maps/search/?api=1&query=';
@@ -178,6 +180,9 @@ export class WeekPlannerCard extends LitElement {
         }
         if (this._compact) {
             cardClasses.push('compact');
+        }
+        if (this._moreCompact) {
+            cardClasses.push('more-compact');
         }
 
         return html`

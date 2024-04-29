@@ -39,6 +39,20 @@ export default css`
         --weather-temperature-font-size: 0.8em;
     }
 
+    ha-card.more-compact {
+        --days-spacing: 3px;
+        --day-date-number-font-size: 1.2em;
+        --day-date-text-font-size: 0.9em;
+        --events-margin-top: 5px;
+        --event-spacing: 2px;
+        --event-padding: 2px 3px;
+        --event-border-width: 1px;
+        --event-font-size: .75em;
+        --event-line-height: 1em;
+        --weather-icon-size: 16px;
+        --weather-temperature-font-size: 0.5em;
+    }
+
     .container {
         container-name: weekplanner;
         container-type: inline-size;
